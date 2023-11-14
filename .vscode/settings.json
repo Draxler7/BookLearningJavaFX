@@ -11,5 +11,6 @@
     "d:\\javafx-sdk-21\\lib\\javafx.swing.jar",
     "d:\\javafx-sdk-21\\lib\\javafx.web.jar",
     "d:\\javafx-sdk-21\\lib\\javafx-swt.jar"
-  ]
+  ],
+  "DockerRun.DisableAutoGenerateConfig": true
 }
