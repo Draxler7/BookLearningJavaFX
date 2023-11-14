@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPaneMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="500.0" style="-fx-background-color: #109ada; -fx-padding: 20px;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <left>
+      <StackPane prefHeight="65.0" prefWidth="239.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" prefHeight="112.0" prefWidth="219.0" text="Работа системы&#10;реального времени&#10;Сахияров Динис&#10;ЭАС-412" wrapText="true" StackPane.alignment="TOP_CENTER">
+               <StackPane.margin>
+                  <Insets />
+               </StackPane.margin>
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </StackPane>
+   </left>
+   <right>
+      <StackPane prefHeight="197.0" prefWidth="147.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="189.0" fitWidth="241.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../bin/img/4a4a8f3537407909776d89f6240c1c0a.gif" />
+               </image>
+            </ImageView>
+         </children>
+      </StackPane>
+   </right>
+   <bottom>
+      <BorderPane prefHeight="125.0" prefWidth="418.0" BorderPane.alignment="CENTER">
+         <center>
+            <Button id="my_button" fx:id="button1" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onClick" prefHeight="63.0" prefWidth="235.0" text="Start" textAlignment="CENTER" textFill="RED" BorderPane.alignment="CENTER">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <font>
+                  <Font name="Bauhaus 93" size="33.0" />
+               </font>
+            </Button>
+         </center>
+      </BorderPane>
+   </bottom>
+   <top>
+      <Label prefHeight="36.0" prefWidth="189.0" text="Мойка автомобилей" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </top>
+   <cursor>
+      <Cursor fx:constant="DISAPPEAR" />
+   </cursor>
+   <effect>
+      <InnerShadow choke="0.32" height="89.13" radius="62.07" width="161.15">
+         <color>
+            <Color red="0.5550953149795532" green="0.8418489694595337" blue="0.8859649300575256" />
+         </color>
+      </InnerShadow>
+   </effect>
+</BorderPane>
