@@ -10,7 +10,9 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class Main extends Application {
+    static Stage primaryStage;
 
+    
     @Override
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
@@ -19,6 +21,11 @@ public class Main extends Application {
         primaryStage.setTitle("Стартовое окно \"Kuromi washing\"");
         primaryStage.setScene(new Scene(root, 600, 400));
         primaryStage.show();
+        this.primaryStage = primaryStage;
+    }
+
+    public static void closeWindow() {
+        primaryStage.close();
     }
 
     public static void main(String[] args) {

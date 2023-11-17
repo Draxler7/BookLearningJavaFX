@@ -20,7 +20,7 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: linear-gradient(to bottom right, #FF0000, #0000FF);" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: linear-gradient(to bottom right, #FF0000, #0000FF);" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControllerWS">
     <padding>
         <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
     </padding>
@@ -51,9 +51,9 @@
                                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                             </rowConstraints>
                             <children>
-                                <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                <BorderPane fx:id="borderPane1" prefHeight="200.0" prefWidth="200.0">
                                     <bottom>
-                                        <ProgressBar prefWidth="200.0" progress="0.1" BorderPane.alignment="CENTER">
+                                        <ProgressBar prefWidth="200.0" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
                                             <cursor>
                                                 <Cursor fx:constant="WAIT" />
                                             </cursor>
@@ -70,9 +70,9 @@
                                         </ImageView>
                                     </center>
                                 </BorderPane>
-                                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                <BorderPane fx:id="borderPane4" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
                                     <bottom>
-                                        <ProgressBar prefWidth="200.0" progress="0.4" BorderPane.alignment="CENTER">
+                                        <ProgressBar prefWidth="200.0" progress="0.4" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
                                             <cursor>
                                                 <Cursor fx:constant="WAIT" />
                                             </cursor>
@@ -82,9 +82,9 @@
                                         </ProgressBar>
                                     </bottom>
                                 </BorderPane>
-                                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
+                                <BorderPane fx:id="borderPane7" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
                                     <bottom>
-                                        <ProgressBar prefWidth="200.0" progress="0.7" BorderPane.alignment="CENTER">
+                                        <ProgressBar prefWidth="200.0" progress="0.7" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
                                             <cursor>
                                                 <Cursor fx:constant="WAIT" />
                                             </cursor>
@@ -94,9 +94,9 @@
                                         </ProgressBar>
                                     </bottom>
                                 </BorderPane>
-                                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                <BorderPane fx:id="borderPane2" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
                                     <bottom>
-                                        <ProgressBar prefWidth="200.0" progress="0.2" BorderPane.alignment="CENTER">
+                                        <ProgressBar prefWidth="200.0" progress="0.2" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
                                             <cursor>
                                                 <Cursor fx:constant="WAIT" />
                                             </cursor>
@@ -106,16 +106,16 @@
                                         </ProgressBar>
                                     </bottom>
                                     <center>
-                                        <ImageView fitHeight="91.0" fitWidth="125.0" BorderPane.alignment="CENTER">
+                                        <ImageView fitHeight="85.0" fitWidth="125.0" BorderPane.alignment="CENTER">
                                             <image>
                                                 <Image url="@../../bin/img/cars/mercedes%20(cabriolet).png" />
                                             </image>
                                         </ImageView>
                                     </center>
                                 </BorderPane>
-                                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                <BorderPane fx:id="borderPane5" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                     <bottom>
-                                        <ProgressBar prefWidth="200.0" progress="0.5" BorderPane.alignment="CENTER">
+                                        <ProgressBar prefWidth="200.0" progress="0.5" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
                                             <cursor>
                                                 <Cursor fx:constant="WAIT" />
                                             </cursor>
@@ -132,9 +132,9 @@
                                         </ImageView>
                                     </center>
                                 </BorderPane>
-                                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                <BorderPane fx:id="borderPane3" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
                                     <bottom>
-                                        <ProgressBar prefWidth="200.0" progress="0.3" BorderPane.alignment="CENTER">
+                                        <ProgressBar prefWidth="200.0" progress="0.3" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
                                             <cursor>
                                                 <Cursor fx:constant="WAIT" />
                                             </cursor>
@@ -151,9 +151,9 @@
                                         </ImageView>
                                     </center>
                                 </BorderPane>
-                                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                <BorderPane fx:id="borderPane6" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                     <bottom>
-                                        <ProgressBar prefWidth="200.0" progress="0.6" BorderPane.alignment="CENTER">
+                                        <ProgressBar prefWidth="200.0" progress="0.6" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
                                             <cursor>
                                                 <Cursor fx:constant="WAIT" />
                                             </cursor>
@@ -163,9 +163,9 @@
                                         </ProgressBar>
                                     </bottom>
                                 </BorderPane>
-                                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                <BorderPane fx:id="borderPane8" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                                     <bottom>
-                                        <ProgressBar prefWidth="200.0" progress="0.8" BorderPane.alignment="CENTER">
+                                        <ProgressBar prefWidth="200.0" progress="0.8" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
                                             <cursor>
                                                 <Cursor fx:constant="WAIT" />
                                             </cursor>
@@ -175,9 +175,9 @@
                                         </ProgressBar>
                                     </bottom>
                                 </BorderPane>
-                                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                <BorderPane fx:id="borderPane9" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
                                     <bottom>
-                                        <ProgressBar prefWidth="200.0" progress="0.9" BorderPane.alignment="CENTER">
+                                        <ProgressBar prefWidth="200.0" progress="0.9" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
                                             <cursor>
                                                 <Cursor fx:constant="WAIT" />
                                             </cursor>

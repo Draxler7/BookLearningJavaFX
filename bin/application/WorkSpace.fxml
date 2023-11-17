@@ -20,20 +20,14 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-    prefHeight="600.0" prefWidth="1000.0"
-    style="-fx-background-color: linear-gradient(to bottom right, #FF0000, #0000FF);"
-    xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: linear-gradient(to bottom right, #FF0000, #0000FF);" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControllerWS">
     <padding>
         <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
     </padding>
     <center>
-        <Accordion style="-fx-background-color: linear-gradient(#e66465, #9198e5);;"
-            BorderPane.alignment="CENTER">
+        <Accordion style="-fx-background-color: linear-gradient(#e66465, #9198e5);;" BorderPane.alignment="CENTER">
             <panes>
-                <TitledPane contentDisplay="CENTER"
-                    style="-fx-background-color: linear-gradient(90deg, #f598a8, #f6edb2);"
-                    text="Режим реального времени">
+                <TitledPane contentDisplay="CENTER" style="-fx-background-color: linear-gradient(90deg, #f598a8, #f6edb2);" text="Режим реального времени">
                     <effect>
                         <InnerShadow>
                             <color>
@@ -45,15 +39,11 @@
                         <Font size="18.0" />
                     </font>
                     <content>
-                        <GridPane prefHeight="379.0" prefWidth="900.0"
-                            style="-fx-background-color: #FFD1DC; -fx-grid-lines-visible: true;">
+                        <GridPane prefHeight="379.0" prefWidth="900.0" style="-fx-background-color: #FFD1DC; -fx-grid-lines-visible: true;">
                             <columnConstraints>
-                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"
-                                    prefWidth="100.0" />
-                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"
-                                    prefWidth="100.0" />
-                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"
-                                    prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                             </columnConstraints>
                             <rowConstraints>
                                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -61,171 +51,138 @@
                                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                             </rowConstraints>
                             <children>
-                                <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                <BorderPane fx:id="borderPane1" prefHeight="200.0" prefWidth="200.0">
                                     <bottom>
-                                        <ProgressBar prefWidth="200.0" progress="0.1"
-                                            BorderPane.alignment="CENTER">
+                                        <ProgressBar prefWidth="200.0" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
                                             <cursor>
                                                 <Cursor fx:constant="WAIT" />
                                             </cursor>
                                             <effect>
-                                                <ColorAdjust brightness="0.48" contrast="0.47"
-                                                    hue="-0.16" saturation="0.33" />
+                                                <ColorAdjust brightness="0.48" contrast="0.47" hue="-0.16" saturation="0.33" />
                                             </effect>
                                         </ProgressBar>
                                     </bottom>
                                     <center>
-                                        <ImageView fitHeight="88.0" fitWidth="126.0"
-                                            pickOnBounds="true" preserveRatio="true"
-                                            BorderPane.alignment="CENTER">
+                                        <ImageView fitHeight="88.0" fitWidth="126.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                                             <image>
                                                 <Image url="@../../bin/img/cars/audi%20(sedan).png" />
                                             </image>
                                         </ImageView>
                                     </center>
                                 </BorderPane>
-                                <BorderPane prefHeight="200.0" prefWidth="200.0"
-                                    GridPane.columnIndex="1">
+                                <BorderPane fx:id="borderPane4" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
                                     <bottom>
-                                        <ProgressBar prefWidth="200.0" progress="0.4"
-                                            BorderPane.alignment="CENTER">
+                                        <ProgressBar prefWidth="200.0" progress="0.4" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
                                             <cursor>
                                                 <Cursor fx:constant="WAIT" />
                                             </cursor>
                                             <effect>
-                                                <ColorAdjust brightness="0.48" contrast="0.47"
-                                                    hue="-0.16" saturation="0.33" />
+                                                <ColorAdjust brightness="0.48" contrast="0.47" hue="-0.16" saturation="0.33" />
                                             </effect>
                                         </ProgressBar>
                                     </bottom>
                                 </BorderPane>
-                                <BorderPane prefHeight="200.0" prefWidth="200.0"
-                                    GridPane.columnIndex="2">
+                                <BorderPane fx:id="borderPane7" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
                                     <bottom>
-                                        <ProgressBar prefWidth="200.0" progress="0.7"
-                                            BorderPane.alignment="CENTER">
+                                        <ProgressBar prefWidth="200.0" progress="0.7" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
                                             <cursor>
                                                 <Cursor fx:constant="WAIT" />
                                             </cursor>
                                             <effect>
-                                                <ColorAdjust brightness="0.48" contrast="0.47"
-                                                    hue="-0.16" saturation="0.33" />
+                                                <ColorAdjust brightness="0.48" contrast="0.47" hue="-0.16" saturation="0.33" />
                                             </effect>
                                         </ProgressBar>
                                     </bottom>
                                 </BorderPane>
-                                <BorderPane prefHeight="200.0" prefWidth="200.0"
-                                    GridPane.rowIndex="1">
+                                <BorderPane fx:id="borderPane2" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
                                     <bottom>
-                                        <ProgressBar prefWidth="200.0" progress="0.2"
-                                            BorderPane.alignment="CENTER">
+                                        <ProgressBar prefWidth="200.0" progress="0.2" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
                                             <cursor>
                                                 <Cursor fx:constant="WAIT" />
                                             </cursor>
                                             <effect>
-                                                <ColorAdjust brightness="0.48" contrast="0.47"
-                                                    hue="-0.16" saturation="0.33" />
+                                                <ColorAdjust brightness="0.48" contrast="0.47" hue="-0.16" saturation="0.33" />
                                             </effect>
                                         </ProgressBar>
                                     </bottom>
                                     <center>
-                                        <ImageView fitHeight="91.0" fitWidth="125.0"
-                                            BorderPane.alignment="CENTER">
+                                        <ImageView fitHeight="85.0" fitWidth="125.0" BorderPane.alignment="CENTER">
                                             <image>
-                                                <Image
-                                                    url="@../../bin/img/cars/mercedes%20(cabriolet).png" />
+                                                <Image url="@../../bin/img/cars/mercedes%20(cabriolet).png" />
                                             </image>
                                         </ImageView>
                                     </center>
                                 </BorderPane>
-                                <BorderPane prefHeight="200.0" prefWidth="200.0"
-                                    GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                <BorderPane fx:id="borderPane5" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                     <bottom>
-                                        <ProgressBar prefWidth="200.0" progress="0.5"
-                                            BorderPane.alignment="CENTER">
+                                        <ProgressBar prefWidth="200.0" progress="0.5" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
                                             <cursor>
                                                 <Cursor fx:constant="WAIT" />
                                             </cursor>
                                             <effect>
-                                                <ColorAdjust brightness="0.48" contrast="0.47"
-                                                    hue="-0.16" saturation="0.33" />
+                                                <ColorAdjust brightness="0.48" contrast="0.47" hue="-0.16" saturation="0.33" />
                                             </effect>
                                         </ProgressBar>
                                     </bottom>
                                     <center>
-                                        <ImageView fitHeight="89.0" fitWidth="128.0"
-                                            BorderPane.alignment="CENTER">
+                                        <ImageView fitHeight="89.0" fitWidth="128.0" BorderPane.alignment="CENTER">
                                             <image>
                                                 <Image url="@../../bin/img/cars/toyota%20(jeep).png" />
                                             </image>
                                         </ImageView>
                                     </center>
                                 </BorderPane>
-                                <BorderPane prefHeight="200.0" prefWidth="200.0"
-                                    GridPane.rowIndex="2">
+                                <BorderPane fx:id="borderPane3" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
                                     <bottom>
-                                        <ProgressBar prefWidth="200.0" progress="0.3"
-                                            BorderPane.alignment="CENTER">
+                                        <ProgressBar prefWidth="200.0" progress="0.3" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
                                             <cursor>
                                                 <Cursor fx:constant="WAIT" />
                                             </cursor>
                                             <effect>
-                                                <ColorAdjust brightness="0.48" contrast="0.47"
-                                                    hue="-0.16" saturation="0.33" />
+                                                <ColorAdjust brightness="0.48" contrast="0.47" hue="-0.16" saturation="0.33" />
                                             </effect>
                                         </ProgressBar>
                                     </bottom>
                                     <center>
-                                        <ImageView fitHeight="87.0" fitWidth="128.0"
-                                            BorderPane.alignment="CENTER">
+                                        <ImageView fitHeight="87.0" fitWidth="128.0" BorderPane.alignment="CENTER">
                                             <image>
-                                                <Image
-                                                    url="@../../bin/img/cars/bmw%20(super%20car).png" />
+                                                <Image url="@../../bin/img/cars/bmw%20(super%20car).png" />
                                             </image>
                                         </ImageView>
                                     </center>
                                 </BorderPane>
-                                <BorderPane prefHeight="200.0" prefWidth="200.0"
-                                    GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                <BorderPane fx:id="borderPane6" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                     <bottom>
-                                        <ProgressBar prefWidth="200.0" progress="0.6"
-                                            BorderPane.alignment="CENTER">
+                                        <ProgressBar prefWidth="200.0" progress="0.6" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
                                             <cursor>
                                                 <Cursor fx:constant="WAIT" />
                                             </cursor>
                                             <effect>
-                                                <ColorAdjust brightness="0.48" contrast="0.47"
-                                                    hue="-0.16" saturation="0.33" />
+                                                <ColorAdjust brightness="0.48" contrast="0.47" hue="-0.16" saturation="0.33" />
                                             </effect>
                                         </ProgressBar>
                                     </bottom>
                                 </BorderPane>
-                                <BorderPane prefHeight="200.0" prefWidth="200.0"
-                                    GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                <BorderPane fx:id="borderPane8" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                                     <bottom>
-                                        <ProgressBar prefWidth="200.0" progress="0.8"
-                                            BorderPane.alignment="CENTER">
+                                        <ProgressBar prefWidth="200.0" progress="0.8" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
                                             <cursor>
                                                 <Cursor fx:constant="WAIT" />
                                             </cursor>
                                             <effect>
-                                                <ColorAdjust brightness="0.48" contrast="0.47"
-                                                    hue="-0.16" saturation="0.33" />
+                                                <ColorAdjust brightness="0.48" contrast="0.47" hue="-0.16" saturation="0.33" />
                                             </effect>
                                         </ProgressBar>
                                     </bottom>
                                 </BorderPane>
-                                <BorderPane prefHeight="200.0" prefWidth="200.0"
-                                    GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                <BorderPane fx:id="borderPane9" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
                                     <bottom>
-                                        <ProgressBar prefWidth="200.0" progress="0.9"
-                                            BorderPane.alignment="CENTER">
+                                        <ProgressBar prefWidth="200.0" progress="0.9" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
                                             <cursor>
                                                 <Cursor fx:constant="WAIT" />
                                             </cursor>
                                             <effect>
-                                                <ColorAdjust brightness="0.48" contrast="0.47"
-                                                    hue="-0.16" saturation="0.33" />
+                                                <ColorAdjust brightness="0.48" contrast="0.47" hue="-0.16" saturation="0.33" />
                                             </effect>
                                         </ProgressBar>
                                     </bottom>
@@ -248,9 +205,7 @@
                     <content>
                         <BorderPane prefHeight="200.0" prefWidth="200.0">
                             <left>
-                                <LineChart prefHeight="353.0" prefWidth="432.0"
-                                    style="-fx-background-color: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d); -fx-border-color: black;"
-                                    title="График затрат пены" BorderPane.alignment="CENTER">
+                                <LineChart prefHeight="353.0" prefWidth="432.0" style="-fx-background-color: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d); -fx-border-color: black;" title="График затрат пены" BorderPane.alignment="CENTER">
                                     <xAxis>
                                         <CategoryAxis label="Время, с" />
                                     </xAxis>
@@ -260,9 +215,7 @@
                                 </LineChart>
                             </left>
                             <right>
-                                <LineChart prefHeight="353.0" prefWidth="434.0"
-                                    style="-fx-background-color: linear-gradient(to left, #c6ffdd, #fbd786, #f7797d); -fx-border-color: black;"
-                                    title="График затрат воды" BorderPane.alignment="CENTER">
+                                <LineChart prefHeight="353.0" prefWidth="434.0" style="-fx-background-color: linear-gradient(to left, #c6ffdd, #fbd786, #f7797d); -fx-border-color: black;" title="График затрат воды" BorderPane.alignment="CENTER">
                                     <xAxis>
                                         <CategoryAxis label="Время, с" side="BOTTOM" />
                                     </xAxis>
@@ -276,8 +229,7 @@
                 </TitledPane>
                 <TitledPane text="Отчеты">
                     <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0"
-                            prefWidth="200.0" />
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
                     </content>
                     <effect>
                         <InnerShadow>

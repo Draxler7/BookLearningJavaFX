@@ -1,15 +1,11 @@
 package application;
 
 import java.io.IOException;
-import java.util.Stack;
 
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
-import javafx.stage.Stage;
 
 public class Controller {
     @FXML
@@ -23,5 +19,6 @@ public class Controller {
         System.out.println("Clicked");
         WorkSpace ws = new WorkSpace();
         ws.show();
+        Main.closeWindow();
     }
 }
