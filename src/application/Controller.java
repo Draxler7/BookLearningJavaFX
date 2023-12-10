@@ -16,7 +16,6 @@ public class Controller {
 
     @FXML
     private void onClick(ActionEvent event) throws IOException {
-        System.out.println("Clicked");
         WorkSpace ws = new WorkSpace();
         ws.show();
         Main.closeWindow();

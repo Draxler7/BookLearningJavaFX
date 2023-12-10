@@ -6,13 +6,14 @@
 <?import javafx.scene.chart.LineChart?>
 <?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.effect.ColorAdjust?>
 <?import javafx.scene.effect.InnerShadow?>
-<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -21,228 +22,410 @@
 <?import javafx.scene.text.Font?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: linear-gradient(to bottom right, #FF0000, #0000FF);" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControllerWS">
-    <padding>
-        <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
-    </padding>
-    <center>
-        <Accordion style="-fx-background-color: linear-gradient(#e66465, #9198e5);;" BorderPane.alignment="CENTER">
-            <panes>
-                <TitledPane contentDisplay="CENTER" style="-fx-background-color: linear-gradient(90deg, #f598a8, #f6edb2);" text="Режим реального времени">
-                    <effect>
-                        <InnerShadow>
-                            <color>
-                                <Color red="1.0" green="0.9666666388511658" />
-                            </color>
-                        </InnerShadow>
-                    </effect>
-                    <font>
-                        <Font size="18.0" />
-                    </font>
-                    <content>
-                        <GridPane prefHeight="379.0" prefWidth="900.0" style="-fx-background-color: #FFD1DC; -fx-grid-lines-visible: true;">
-                            <columnConstraints>
-                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                            </columnConstraints>
-                            <rowConstraints>
-                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                            </rowConstraints>
-                            <children>
-                                <BorderPane fx:id="borderPane1" prefHeight="200.0" prefWidth="200.0">
-                                    <bottom>
-                                        <ProgressBar prefWidth="200.0" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
-                                            <cursor>
-                                                <Cursor fx:constant="WAIT" />
-                                            </cursor>
-                                            <effect>
-                                                <ColorAdjust brightness="0.48" contrast="0.47" hue="-0.16" saturation="0.33" />
-                                            </effect>
-                                        </ProgressBar>
-                                    </bottom>
-                                    <center>
-                                        <ImageView fitHeight="88.0" fitWidth="126.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-                                            <image>
-                                                <Image url="@../../bin/img/cars/audi%20(sedan).png" />
-                                            </image>
-                                        </ImageView>
-                                    </center>
-                                </BorderPane>
-                                <BorderPane fx:id="borderPane4" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
-                                    <bottom>
-                                        <ProgressBar prefWidth="200.0" progress="0.4" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
-                                            <cursor>
-                                                <Cursor fx:constant="WAIT" />
-                                            </cursor>
-                                            <effect>
-                                                <ColorAdjust brightness="0.48" contrast="0.47" hue="-0.16" saturation="0.33" />
-                                            </effect>
-                                        </ProgressBar>
-                                    </bottom>
-                                </BorderPane>
-                                <BorderPane fx:id="borderPane7" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
-                                    <bottom>
-                                        <ProgressBar prefWidth="200.0" progress="0.7" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
-                                            <cursor>
-                                                <Cursor fx:constant="WAIT" />
-                                            </cursor>
-                                            <effect>
-                                                <ColorAdjust brightness="0.48" contrast="0.47" hue="-0.16" saturation="0.33" />
-                                            </effect>
-                                        </ProgressBar>
-                                    </bottom>
-                                </BorderPane>
-                                <BorderPane fx:id="borderPane2" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
-                                    <bottom>
-                                        <ProgressBar prefWidth="200.0" progress="0.2" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
-                                            <cursor>
-                                                <Cursor fx:constant="WAIT" />
-                                            </cursor>
-                                            <effect>
-                                                <ColorAdjust brightness="0.48" contrast="0.47" hue="-0.16" saturation="0.33" />
-                                            </effect>
-                                        </ProgressBar>
-                                    </bottom>
-                                    <center>
-                                        <ImageView fitHeight="85.0" fitWidth="125.0" BorderPane.alignment="CENTER">
-                                            <image>
-                                                <Image url="@../../bin/img/cars/mercedes%20(cabriolet).png" />
-                                            </image>
-                                        </ImageView>
-                                    </center>
-                                </BorderPane>
-                                <BorderPane fx:id="borderPane5" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                                    <bottom>
-                                        <ProgressBar prefWidth="200.0" progress="0.5" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
-                                            <cursor>
-                                                <Cursor fx:constant="WAIT" />
-                                            </cursor>
-                                            <effect>
-                                                <ColorAdjust brightness="0.48" contrast="0.47" hue="-0.16" saturation="0.33" />
-                                            </effect>
-                                        </ProgressBar>
-                                    </bottom>
-                                    <center>
-                                        <ImageView fitHeight="89.0" fitWidth="128.0" BorderPane.alignment="CENTER">
-                                            <image>
-                                                <Image url="@../../bin/img/cars/toyota%20(jeep).png" />
-                                            </image>
-                                        </ImageView>
-                                    </center>
-                                </BorderPane>
-                                <BorderPane fx:id="borderPane3" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
-                                    <bottom>
-                                        <ProgressBar prefWidth="200.0" progress="0.3" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
-                                            <cursor>
-                                                <Cursor fx:constant="WAIT" />
-                                            </cursor>
-                                            <effect>
-                                                <ColorAdjust brightness="0.48" contrast="0.47" hue="-0.16" saturation="0.33" />
-                                            </effect>
-                                        </ProgressBar>
-                                    </bottom>
-                                    <center>
-                                        <ImageView fitHeight="87.0" fitWidth="128.0" BorderPane.alignment="CENTER">
-                                            <image>
-                                                <Image url="@../../bin/img/cars/bmw%20(super%20car).png" />
-                                            </image>
-                                        </ImageView>
-                                    </center>
-                                </BorderPane>
-                                <BorderPane fx:id="borderPane6" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                                    <bottom>
-                                        <ProgressBar prefWidth="200.0" progress="0.6" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
-                                            <cursor>
-                                                <Cursor fx:constant="WAIT" />
-                                            </cursor>
-                                            <effect>
-                                                <ColorAdjust brightness="0.48" contrast="0.47" hue="-0.16" saturation="0.33" />
-                                            </effect>
-                                        </ProgressBar>
-                                    </bottom>
-                                </BorderPane>
-                                <BorderPane fx:id="borderPane8" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
-                                    <bottom>
-                                        <ProgressBar prefWidth="200.0" progress="0.8" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
-                                            <cursor>
-                                                <Cursor fx:constant="WAIT" />
-                                            </cursor>
-                                            <effect>
-                                                <ColorAdjust brightness="0.48" contrast="0.47" hue="-0.16" saturation="0.33" />
-                                            </effect>
-                                        </ProgressBar>
-                                    </bottom>
-                                </BorderPane>
-                                <BorderPane fx:id="borderPane9" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
-                                    <bottom>
-                                        <ProgressBar prefWidth="200.0" progress="0.9" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
-                                            <cursor>
-                                                <Cursor fx:constant="WAIT" />
-                                            </cursor>
-                                            <effect>
-                                                <ColorAdjust brightness="0.48" contrast="0.47" hue="-0.16" saturation="0.33" />
-                                            </effect>
-                                        </ProgressBar>
-                                    </bottom>
-                                </BorderPane>
-                            </children>
-                        </GridPane>
-                    </content>
-                </TitledPane>
-                <TitledPane text="Графики">
-                    <effect>
-                        <InnerShadow>
-                            <color>
-                                <Color red="1.0" />
-                            </color>
-                        </InnerShadow>
-                    </effect>
-                    <font>
-                        <Font size="18.0" />
-                    </font>
-                    <content>
-                        <BorderPane prefHeight="200.0" prefWidth="200.0">
-                            <left>
-                                <LineChart prefHeight="353.0" prefWidth="432.0" style="-fx-background-color: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d); -fx-border-color: black;" title="График затрат пены" BorderPane.alignment="CENTER">
-                                    <xAxis>
-                                        <CategoryAxis label="Время, с" />
-                                    </xAxis>
-                                    <yAxis>
-                                        <NumberAxis label="Затрачиваемый объем пены, л" side="LEFT" />
-                                    </yAxis>
-                                </LineChart>
-                            </left>
-                            <right>
-                                <LineChart prefHeight="353.0" prefWidth="434.0" style="-fx-background-color: linear-gradient(to left, #c6ffdd, #fbd786, #f7797d); -fx-border-color: black;" title="График затрат воды" BorderPane.alignment="CENTER">
-                                    <xAxis>
-                                        <CategoryAxis label="Время, с" side="BOTTOM" />
-                                    </xAxis>
-                                    <yAxis>
-                                        <NumberAxis label="Затрачиваемый объем воды, л" side="LEFT" />
-                                    </yAxis>
-                                </LineChart>
-                            </right>
+   <padding>
+      <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+   </padding>
+   <center>
+      <Accordion style="-fx-background-color: linear-gradient(#e66465, #9198e5);;" BorderPane.alignment="CENTER">
+         <panes>
+            <TitledPane alignment="CENTER" contentDisplay="CENTER" text="Режим реального времени">
+               <effect>
+                  <InnerShadow>
+                     <color>
+                        <Color red="1.0" green="0.9666666388511658" />
+                     </color>
+                  </InnerShadow>
+               </effect>
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <content>
+                  <GridPane prefHeight="379.0" prefWidth="900.0" style="-fx-background-color: #FFD1DC; -fx-grid-lines-visible: true;">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <BorderPane fx:id="borderPane1" prefHeight="200.0" prefWidth="200.0">
+                           <bottom>
+                              <ProgressBar fx:id="pb1" prefWidth="200.0" progress="0.0" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
+                                 <cursor>
+                                    <Cursor fx:constant="WAIT" />
+                                 </cursor>
+                                 <effect>
+                                    <ColorAdjust brightness="0.48" contrast="0.47" hue="-0.16" saturation="0.33" />
+                                 </effect>
+                              </ProgressBar>
+                           </bottom>
+                           <center>
+                              <ImageView fx:id="iv1" fitHeight="87.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+                           </center>
+                           <right>
+                              <TextArea fx:id="typeA1" prefHeight="87.0" prefWidth="75.0" text="Тип машины:" wrapText="true" BorderPane.alignment="CENTER">
+                                 <effect>
+                                    <InnerShadow>
+                                       <color>
+                                          <Color green="1.0" blue="0.18333333730697632" />
+                                       </color>
+                                    </InnerShadow>
+                                 </effect>
+                              </TextArea>
+                           </right>
+                           <left>
+                              <TextArea fx:id="statA1" editable="false" prefHeight="87.0" prefWidth="82.0" text="Ожидание машины" wrapText="true" BorderPane.alignment="CENTER">
+                                 <effect>
+                                    <InnerShadow>
+                                       <color>
+                                          <Color red="1.0" />
+                                       </color>
+                                    </InnerShadow>
+                                 </effect>
+                              </TextArea>
+                           </left>
                         </BorderPane>
-                    </content>
-                </TitledPane>
-                <TitledPane text="Отчеты">
-                    <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                    </content>
-                    <effect>
-                        <InnerShadow>
-                            <color>
-                                <Color green="1.0" blue="0.06666667014360428" />
-                            </color>
-                        </InnerShadow>
-                    </effect>
-                    <font>
-                        <Font size="18.0" />
-                    </font>
-                </TitledPane>
-            </panes>
-        </Accordion>
-    </center>
+                        <BorderPane fx:id="borderPane7" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
+                           <bottom>
+                              <ProgressBar fx:id="pb7" prefWidth="200.0" progress="0.0" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
+                                 <cursor>
+                                    <Cursor fx:constant="WAIT" />
+                                 </cursor>
+                                 <effect>
+                                    <ColorAdjust brightness="0.48" contrast="0.47" hue="-0.16" saturation="0.33" />
+                                 </effect>
+                              </ProgressBar>
+                           </bottom>
+                           <center>
+                              <ImageView fx:id="iv7" fitHeight="87.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+                           </center>
+                           <left>
+                              <TextArea fx:id="statA7" editable="false" prefHeight="87.0" prefWidth="82.0" text="Ожидание машины" wrapText="true" BorderPane.alignment="CENTER">
+                                 <effect>
+                                    <InnerShadow>
+                                       <color>
+                                          <Color red="1.0" />
+                                       </color>
+                                    </InnerShadow>
+                                 </effect>
+                              </TextArea>
+                           </left>
+                           <right>
+                              <TextArea fx:id="typeA7" prefHeight="87.0" prefWidth="75.0" text="Тип машины:" wrapText="true" BorderPane.alignment="CENTER">
+                                 <effect>
+                                    <InnerShadow>
+                                       <color>
+                                          <Color green="1.0" blue="0.18333333730697632" />
+                                       </color>
+                                    </InnerShadow>
+                                 </effect>
+                              </TextArea>
+                           </right>
+                        </BorderPane>
+                        <BorderPane fx:id="borderPane2" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                           <bottom>
+                              <ProgressBar fx:id="pb2" prefWidth="200.0" progress="0.0" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
+                                 <cursor>
+                                    <Cursor fx:constant="WAIT" />
+                                 </cursor>
+                                 <effect>
+                                    <ColorAdjust brightness="0.48" contrast="0.47" hue="-0.16" saturation="0.33" />
+                                 </effect>
+                              </ProgressBar>
+                           </bottom>
+                           <center>
+                              <ImageView fx:id="iv2" fitHeight="87.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+                           </center>
+                           <left>
+                              <TextArea fx:id="statA2" editable="false" prefHeight="87.0" prefWidth="82.0" text="Ожидание машины" wrapText="true" BorderPane.alignment="CENTER">
+                                 <effect>
+                                    <InnerShadow>
+                                       <color>
+                                          <Color red="1.0" />
+                                       </color>
+                                    </InnerShadow>
+                                 </effect>
+                              </TextArea>
+                           </left>
+                           <right>
+                              <TextArea fx:id="typeA2" prefHeight="87.0" prefWidth="75.0" text="Тип машины:" wrapText="true" BorderPane.alignment="CENTER">
+                                 <effect>
+                                    <InnerShadow>
+                                       <color>
+                                          <Color green="1.0" blue="0.18333333730697632" />
+                                       </color>
+                                    </InnerShadow>
+                                 </effect>
+                              </TextArea>
+                           </right>
+                        </BorderPane>
+                        <BorderPane fx:id="borderPane5" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <bottom>
+                              <ProgressBar fx:id="pb5" prefWidth="200.0" progress="0.0" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
+                                 <cursor>
+                                    <Cursor fx:constant="WAIT" />
+                                 </cursor>
+                                 <effect>
+                                    <ColorAdjust brightness="0.48" contrast="0.47" hue="-0.16" saturation="0.33" />
+                                 </effect>
+                              </ProgressBar>
+                           </bottom>
+                           <center>
+                              <ImageView fx:id="iv5" fitHeight="87.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+                           </center>
+                           <left>
+                              <TextArea fx:id="statA5" editable="false" prefHeight="87.0" prefWidth="82.0" text="Ожидание машины" wrapText="true" BorderPane.alignment="CENTER">
+                                 <effect>
+                                    <InnerShadow>
+                                       <color>
+                                          <Color red="1.0" />
+                                       </color>
+                                    </InnerShadow>
+                                 </effect>
+                              </TextArea>
+                           </left>
+                           <right>
+                              <TextArea fx:id="typeA5" prefHeight="87.0" prefWidth="75.0" text="Тип машины:" wrapText="true" BorderPane.alignment="CENTER">
+                                 <effect>
+                                    <InnerShadow>
+                                       <color>
+                                          <Color green="1.0" blue="0.18333333730697632" />
+                                       </color>
+                                    </InnerShadow>
+                                 </effect>
+                              </TextArea>
+                           </right>
+                        </BorderPane>
+                        <BorderPane fx:id="borderPane3" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                           <bottom>
+                              <ProgressBar fx:id="pb3" prefWidth="200.0" progress="0.0" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
+                                 <cursor>
+                                    <Cursor fx:constant="WAIT" />
+                                 </cursor>
+                                 <effect>
+                                    <ColorAdjust brightness="0.48" contrast="0.47" hue="-0.16" saturation="0.33" />
+                                 </effect>
+                              </ProgressBar>
+                           </bottom>
+                           <center>
+                              <ImageView fx:id="iv3" fitHeight="87.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+                           </center>
+                           <left>
+                              <TextArea fx:id="statA3" editable="false" prefHeight="87.0" prefWidth="82.0" text="Ожидание машины" wrapText="true" BorderPane.alignment="CENTER">
+                                 <effect>
+                                    <InnerShadow>
+                                       <color>
+                                          <Color red="1.0" />
+                                       </color>
+                                    </InnerShadow>
+                                 </effect>
+                              </TextArea>
+                           </left>
+                           <right>
+                              <TextArea fx:id="typeA3" prefHeight="87.0" prefWidth="75.0" text="Тип машины:" wrapText="true" BorderPane.alignment="CENTER">
+                                 <effect>
+                                    <InnerShadow>
+                                       <color>
+                                          <Color green="1.0" blue="0.18333333730697632" />
+                                       </color>
+                                    </InnerShadow>
+                                 </effect>
+                              </TextArea>
+                           </right>
+                        </BorderPane>
+                        <BorderPane fx:id="borderPane6" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <bottom>
+                              <ProgressBar fx:id="pb6" prefWidth="200.0" progress="0.0" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
+                                 <cursor>
+                                    <Cursor fx:constant="WAIT" />
+                                 </cursor>
+                                 <effect>
+                                    <ColorAdjust brightness="0.48" contrast="0.47" hue="-0.16" saturation="0.33" />
+                                 </effect>
+                              </ProgressBar>
+                           </bottom>
+                           <center>
+                              <ImageView fx:id="iv6" fitHeight="87.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+                           </center>
+                           <left>
+                              <TextArea fx:id="statA6" editable="false" prefHeight="87.0" prefWidth="82.0" text="Ожидание машины" wrapText="true" BorderPane.alignment="CENTER">
+                                 <effect>
+                                    <InnerShadow>
+                                       <color>
+                                          <Color red="1.0" />
+                                       </color>
+                                    </InnerShadow>
+                                 </effect>
+                              </TextArea>
+                           </left>
+                           <right>
+                              <TextArea fx:id="typeA6" prefHeight="87.0" prefWidth="75.0" text="Тип машины:" wrapText="true" BorderPane.alignment="CENTER">
+                                 <effect>
+                                    <InnerShadow>
+                                       <color>
+                                          <Color green="1.0" blue="0.18333333730697632" />
+                                       </color>
+                                    </InnerShadow>
+                                 </effect>
+                              </TextArea>
+                           </right>
+                        </BorderPane>
+                        <BorderPane fx:id="borderPane8" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <bottom>
+                              <ProgressBar fx:id="pb8" prefWidth="200.0" progress="0.0" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
+                                 <cursor>
+                                    <Cursor fx:constant="WAIT" />
+                                 </cursor>
+                                 <effect>
+                                    <ColorAdjust brightness="0.48" contrast="0.47" hue="-0.16" saturation="0.33" />
+                                 </effect>
+                              </ProgressBar>
+                           </bottom>
+                           <center>
+                              <ImageView fx:id="iv8" fitHeight="87.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+                           </center>
+                           <left>
+                              <TextArea fx:id="statA8" editable="false" prefHeight="87.0" prefWidth="82.0" text="Ожидание машины" wrapText="true" BorderPane.alignment="CENTER">
+                                 <effect>
+                                    <InnerShadow>
+                                       <color>
+                                          <Color red="1.0" />
+                                       </color>
+                                    </InnerShadow>
+                                 </effect>
+                              </TextArea>
+                           </left>
+                           <right>
+                              <TextArea fx:id="typeA8" prefHeight="87.0" prefWidth="75.0" text="Тип машины:" wrapText="true" BorderPane.alignment="CENTER">
+                                 <effect>
+                                    <InnerShadow>
+                                       <color>
+                                          <Color green="1.0" blue="0.18333333730697632" />
+                                       </color>
+                                    </InnerShadow>
+                                 </effect>
+                              </TextArea>
+                           </right>
+                        </BorderPane>
+                        <BorderPane fx:id="borderPane9" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                           <bottom>
+                              <ProgressBar fx:id="pb9" prefWidth="200.0" progress="0.0" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
+                                 <cursor>
+                                    <Cursor fx:constant="WAIT" />
+                                 </cursor>
+                                 <effect>
+                                    <ColorAdjust brightness="0.48" contrast="0.47" hue="-0.16" saturation="0.33" />
+                                 </effect>
+                              </ProgressBar>
+                           </bottom>
+                           <center>
+                              <ImageView fx:id="iv9" fitHeight="87.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+                           </center>
+                           <left>
+                              <TextArea fx:id="statA9" editable="false" prefHeight="87.0" prefWidth="82.0" text="Ожидание машины" wrapText="true" BorderPane.alignment="CENTER">
+                                 <effect>
+                                    <InnerShadow>
+                                       <color>
+                                          <Color red="1.0" />
+                                       </color>
+                                    </InnerShadow>
+                                 </effect>
+                              </TextArea>
+                           </left>
+                           <right>
+                              <TextArea fx:id="typeA9" prefHeight="87.0" prefWidth="75.0" text="Тип машины:" wrapText="true" BorderPane.alignment="CENTER">
+                                 <effect>
+                                    <InnerShadow>
+                                       <color>
+                                          <Color green="1.0" blue="0.18333333730697632" />
+                                       </color>
+                                    </InnerShadow>
+                                 </effect>
+                              </TextArea>
+                           </right>
+                        </BorderPane>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                           <bottom>
+                              <ProgressBar fx:id="pb4" prefWidth="200.0" progress="0.0" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
+                                 <cursor>
+                                    <Cursor fx:constant="WAIT" />
+                                 </cursor>
+                                 <effect>
+                                    <ColorAdjust brightness="0.48" contrast="0.47" hue="-0.16" saturation="0.33" />
+                                 </effect>
+                              </ProgressBar>
+                           </bottom>
+                           <center>
+                              <ImageView fx:id="iv4" fitHeight="87.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+                           </center>
+                           <left>
+                              <TextArea fx:id="statA4" editable="false" prefHeight="87.0" prefWidth="82.0" text="Ожидание машины" wrapText="true" BorderPane.alignment="CENTER">
+                                 <effect>
+                                    <InnerShadow>
+                                       <color>
+                                          <Color red="1.0" />
+                                       </color>
+                                    </InnerShadow>
+                                 </effect>
+                              </TextArea>
+                           </left>
+                           <right>
+                              <TextArea fx:id="typeA4" prefHeight="87.0" prefWidth="75.0" text="Тип машины:" wrapText="true" BorderPane.alignment="CENTER">
+                                 <effect>
+                                    <InnerShadow>
+                                       <color>
+                                          <Color green="1.0" blue="0.18333333730697632" />
+                                       </color>
+                                    </InnerShadow>
+                                 </effect>
+                              </TextArea>
+                           </right>
+                        </BorderPane>
+                     </children>
+                  </GridPane>
+               </content>
+            </TitledPane>
+            <TitledPane alignment="CENTER" text="Графики">
+               <effect>
+                  <InnerShadow>
+                     <color>
+                        <Color red="1.0" />
+                     </color>
+                  </InnerShadow>
+               </effect>
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <content>
+                  <BorderPane fx:id="chartPane" prefHeight="200.0" prefWidth="200.0">
+                     <right>
+                        <LineChart fx:id="chartWater" prefHeight="353.0" prefWidth="434.0" style="-fx-background-color: linear-gradient(to left, #c6ffdd, #fbd786, #f7797d); -fx-border-color: black;" title="График затрат воды" BorderPane.alignment="CENTER">
+                           <xAxis>
+                              <CategoryAxis label="Время, с" side="BOTTOM" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis label="Затрачиваемый объем воды, л" side="LEFT" />
+                           </yAxis>
+                        </LineChart>
+                     </right>
+                  </BorderPane>
+               </content>
+            </TitledPane>
+         </panes>
+      </Accordion>
+   </center>
+   <top>
+      <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <items>
+            <Button fx:id="btn1" mnemonicParsing="false" onAction="#onStartTrue" text="Запуск" />
+            <Button fx:id="btn2" mnemonicParsing="false" onAction="#onStartFalse" text="Остановка" />
+            <Button fx:id="btn3" mnemonicParsing="false" text="Аварийная ситуация 1" />
+            <Button fx:id="btn4" mnemonicParsing="false" text="Аварийная ситуация 2" />
+         </items>
+      </ToolBar>
+   </top>
 </BorderPane>
