@@ -2,13 +2,13 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
-<?import javafx.scene.chart.CategoryAxis?>
-<?import javafx.scene.chart.LineChart?>
-<?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ProgressIndicator?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.effect.ColorAdjust?>
@@ -17,11 +17,14 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: linear-gradient(to bottom right, #FF0000, #0000FF);" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControllerWS">
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: linear-gradient(to bottom right, #FF0000, #0000FF);" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControllerWS">
    <padding>
       <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
    </padding>
@@ -401,19 +404,70 @@
                   <Font size="18.0" />
                </font>
                <content>
-                  <BorderPane fx:id="chartPane" prefHeight="200.0" prefWidth="200.0">
-                     <right>
-                        <LineChart fx:id="chartWater" prefHeight="353.0" prefWidth="434.0" style="-fx-background-color: linear-gradient(to left, #c6ffdd, #fbd786, #f7797d); -fx-border-color: black;" title="График затрат воды" BorderPane.alignment="CENTER">
-                           <xAxis>
-                              <CategoryAxis label="Время, с" side="BOTTOM" />
-                           </xAxis>
-                           <yAxis>
-                              <NumberAxis label="Затрачиваемый объем воды, л" side="LEFT" />
-                           </yAxis>
-                        </LineChart>
-                     </right>
-                  </BorderPane>
+                  <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: b4ffb3;">
+                     <children>
+                        <ProgressIndicator fx:id="speedPena" layoutX="5.0" layoutY="2.0" maxHeight="380.0" maxWidth="444.0" prefHeight="379.0" prefWidth="444.0" progress="0.25" rotate="180.0" />
+                        <ProgressIndicator fx:id="speedWater" layoutX="426.0" layoutY="1.0" maxHeight="384.0" maxWidth="473.0" prefHeight="381.0" prefWidth="469.0" progress="0.25" rotate="180.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b4ffb3" height="177.0" layoutX="1.0" layoutY="204.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="897.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b4ffb3" height="21.0" layoutX="5.0" layoutY="1.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="893.0" />
+                        <Label layoutX="28.0" layoutY="208.0" text="Количество затрачиваемой пены, л">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="469.0" layoutY="207.0" text="Количество затрачиваемой воды, л">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="28.0" layoutY="171.0" text="10" />
+                        <Label layoutX="43.0" layoutY="131.0" text="20" />
+                        <Label layoutX="62.0" layoutY="92.0" text="30" />
+                        <Label layoutX="91.0" layoutY="58.0" text="40" />
+                        <Label layoutX="128.0" layoutY="31.0" text="50" />
+                        <Label layoutX="173.0" layoutY="13.0" text="60" />
+                        <Label layoutX="218.0" layoutY="5.0" text="70" />
+                        <Label layoutX="268.0" layoutY="13.0" text="80" />
+                        <Label layoutX="314.0" layoutY="31.0" text="80" />
+                        <Label layoutX="353.0" layoutY="58.0" text="90" />
+                        <Label layoutX="381.0" layoutY="92.0" text="100" />
+                        <Label layoutX="402.0" layoutY="131.0" text="110" />
+                        <Label layoutX="414.0" layoutY="171.0" text="120" />
+                        <Label layoutX="462.0" layoutY="171.0" text="30" />
+                        <Label layoutX="468.0" layoutY="131.0" text="60" />
+                        <Label layoutX="491.0" layoutY="92.0" text="90" />
+                        <Label layoutX="519.0" layoutY="58.0" text="120" />
+                        <Label layoutX="558.0" layoutY="31.0" text="150" />
+                        <Label layoutX="601.0" layoutY="13.0" text="180" />
+                        <Label layoutX="653.0" layoutY="3.0" text="210" />
+                        <Label layoutX="708.0" layoutY="13.0" text="240" />
+                        <Label layoutX="751.0" layoutY="31.0" text="270" />
+                        <Label layoutX="784.0" layoutY="58.0" text="300" />
+                        <Label layoutX="815.0" layoutY="92.0" text="330" />
+                        <Label layoutX="836.0" layoutY="131.0" text="360" />
+                        <Label layoutX="850.0" layoutY="171.0" text="390" />
+                     </children>
+                  </Pane>
                </content>
+            </TitledPane>
+            <TitledPane alignment="CENTER" animated="false" text="Неисправность" textAlignment="CENTER">
+              <content>
+                  <StackPane>
+                     <children>
+                        <TextField fx:id="textMessage" alignment="CENTER" editable="false" prefHeight="339.0" prefWidth="869.0" text="Все работает прекрасно">
+                           <font>
+                              <Font name="System Bold" size="43.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </StackPane>
+              </content>
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
             </TitledPane>
          </panes>
       </Accordion>
@@ -423,8 +477,9 @@
          <items>
             <Button fx:id="btn1" mnemonicParsing="false" onAction="#onStartTrue" text="Запуск" />
             <Button fx:id="btn2" mnemonicParsing="false" onAction="#onStartFalse" text="Остановка" />
-            <Button fx:id="btn3" mnemonicParsing="false" text="Аварийная ситуация 1" />
-            <Button fx:id="btn4" mnemonicParsing="false" text="Аварийная ситуация 2" />
+            <Button fx:id="btn3" mnemonicParsing="false" onAction="#crash1" text="Аварийная ситуация 1" />
+            <Button fx:id="btn4" mnemonicParsing="false" onAction="#crash2" text="Аварийная ситуация 2" />
+            <Button fx:id="btn5" mnemonicParsing="false" onAction="#fix" text="Аварийная служба" />
          </items>
       </ToolBar>
    </top>
